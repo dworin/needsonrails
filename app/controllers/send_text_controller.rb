@@ -16,7 +16,7 @@ class SendTextController < ApplicationController
 			:to => number_to_send_to,
 			:body => "This is message is sent to you by The Needs Report"
 			)
-	render :html => "You sent a text"
+
 	end
 
 

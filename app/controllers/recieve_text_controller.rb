@@ -6,6 +6,8 @@ class RecieveTextController < ApplicationController
 		@need = Need.new(:source => from_number, :needtext => from_number, :category_id => 1)
 		@need.save
 
+		render :nothing => true
+
 
 		# SMSLogger.log_text_message from_number, message_body
 	end
