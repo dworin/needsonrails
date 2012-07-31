@@ -3,6 +3,10 @@ Needsreport::Application.routes.draw do
 
   resources :categories
 
+  post 'recieve_text/index'
+  get 'recieve_text/index'
+  get 'send_text/index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

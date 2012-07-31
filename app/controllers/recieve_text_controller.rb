@@ -3,7 +3,11 @@ class RecieveTextController < ApplicationController
 		message_body = params["Body"]
 		from_number = params["From"]
 
-		SMSLogger.log_text_message from_number, message_body
+		@need = Need.new(:source => from_number, :needtext => from_number)
+		@need.save
+
+
+		# SMSLogger.log_text_message from_number, message_body
 	end
-	
+
 end
