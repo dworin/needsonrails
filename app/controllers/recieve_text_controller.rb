@@ -3,7 +3,7 @@ class RecieveTextController < ApplicationController
 		message_body = params["Body"]
 		from_number = params["From"]
 
-		@need = Need.new(:source => from_number, :needtext => from_number, :category_id => 1)
+		@need = Need.new(:source => from_number, :needtext => message_body, :category_id => 1)
 		@need.save
 
 		render :nothing => true
