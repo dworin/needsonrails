@@ -1,4 +1,8 @@
 Needsreport::Application.routes.draw do
+  resources :needs
+
+  resources :categories
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

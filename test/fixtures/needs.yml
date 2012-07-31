@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  source: MyString
+  category_id: 1
+  needtext: MyString
+  latitude: 9.99
+  longitude: 9.99
+
+two:
+  source: MyString
+  category_id: 1
+  needtext: MyString
+  latitude: 9.99
+  longitude: 9.99

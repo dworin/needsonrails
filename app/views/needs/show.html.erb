@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Source:</b>
+  <%= @need.source %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @need.category_id %>
+</p>
+
+<p>
+  <b>Needtext:</b>
+  <%= @need.needtext %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @need.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @need.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_need_path(@need) %> |
+<%= link_to 'Back', needs_path %>
