@@ -1,0 +1,2 @@
+module RecieveTextHelper
+end
