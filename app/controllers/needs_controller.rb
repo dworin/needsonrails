@@ -25,6 +25,7 @@ class NeedsController < ApplicationController
   # GET /needs/new.json
   def new
     @need = Need.new
+    @categories = Category.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +36,14 @@ class NeedsController < ApplicationController
   # GET /needs/1/edit
   def edit
     @need = Need.find(params[:id])
+    @categories = Category.all
   end
 
   # POST /needs
   # POST /needs.json
   def create
     @need = Need.new(params[:need])
+    @categories = Category.all
 
     respond_to do |format|
       if @need.save
