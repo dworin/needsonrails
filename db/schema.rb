@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731035028) do
+ActiveRecord::Schema.define(:version => 20120801131413) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(:version => 20120731035028) do
     t.decimal  "longitude"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.text     "country"
+    t.text     "state"
+    t.text     "city"
   end
 
 end
