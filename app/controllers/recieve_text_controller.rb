@@ -7,7 +7,7 @@ class RecieveTextController < ApplicationController
 		from_country = params["FromCountry"]
 		from_state = params["FromState"]
 
-		@need = Need.new(:source => from_number, :needtext => message_body, :category_id => 1)
+		@need = Need.new(:source => from_number, :needtext => message_body, :category_id => 1, :country => from_country, :state => from_state, :city => from_city)
 		@need.save
 
 		render :nothing => true
