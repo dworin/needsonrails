@@ -10,6 +10,8 @@ class RecieveTextController < ApplicationController
 		@need = Need.new(:source => from_number, :needtext => message_body, :category_id => 1, :country => from_country, :state => from_state, :city => from_city)
 		@need.save
 
+
+		@response = ""
 		render :nothing => true
 
 
