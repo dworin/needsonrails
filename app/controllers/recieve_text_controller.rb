@@ -11,8 +11,7 @@ class RecieveTextController < ApplicationController
 		@need.save
 
 
-		@response = ""
-		render :nothing => true
+		render :xml => '<?xml version="1.0" encoding="UTF-8"?><Response><Sms from="+13134990491" to="'+from_number+'">Thanks for submitting your need!</Sms></Response>'
 
 
 		# SMSLogger.log_text_message from_number, message_body
