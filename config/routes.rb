@@ -7,6 +7,8 @@ Needsreport::Application.routes.draw do
   get 'recieve_text/index'
   get 'send_text/index'
 
+  match '/' => redirect('http://www.needsreport.org') 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
