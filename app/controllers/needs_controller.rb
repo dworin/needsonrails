@@ -7,7 +7,7 @@ class NeedsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @needs }
-      format.csv { render text:  @products.to_csv}
+      format.csv { render text:  @needs.to_csv}
     end
   end
 
