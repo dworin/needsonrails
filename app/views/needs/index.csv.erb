@@ -1,0 +1,13 @@
+<%- headers = ["Source", "Category", "Needtext", "Country", "State", "City", "Latitude", "Longitude"] -%>
+<%= CSV.generate_line headers %>
+<%- @needs.each do |need| -%>
+<%- row = [ need.source,
+            need.category.name,
+            need.needtext,
+            need.country,
+            need.city,
+            need.state,
+            need.latitude,
+            need.longitude ] -%>
+<%=   CSV.generate_line(row).html_safe.strip %>
+<%- end -%>
