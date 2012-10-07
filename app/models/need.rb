@@ -10,11 +10,3 @@ class Need < ActiveRecord::Base
   after_validation :geocode
 end
 
-def self.to_csv
-	CSV.generate do |csv|
-		csv << column_names
-		all.each do |need|
-			csv << need.attributes.values_at(*column_names)
-		end
-	end
-end
